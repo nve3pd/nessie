@@ -1,0 +1,7 @@
+sudo: false
+language: c
+service:
+  - docker
+script:
+  - docker build -t nessie .
+  - docker run nessie nimble test
